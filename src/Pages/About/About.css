@@ -1,0 +1,26 @@
+.about_page{
+    padding-top: 80px;
+}
+.education_item h3{
+    color: #ddd;
+    font-size: 16px;
+}
+.education_item h4{
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+.education_year, .education_result{
+    font-size: 15px;
+    font-weight: normal;
+    color: #bbb;
+}
+
+.about_img_wrapper{
+    background-color: #191919;
+    padding: 10px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    max-width: 400px;
+}

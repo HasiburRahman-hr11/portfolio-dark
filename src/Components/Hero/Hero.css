@@ -1,0 +1,30 @@
+.hero_subtitle {
+    position: relative;
+    display: inline-block;
+}
+
+.hero_subtitle::after {
+    content: "";
+    position: absolute;
+    right: -80px;
+    top: 9px;
+    width: 65px;
+    height: 1px;
+    background: #fff;
+    transition: all .3s;
+}
+.hero_content:hover .hero_subtitle::after{
+    right: -100px;
+}
+
+@media only screen and (max-width:600px){
+    .hero_content{
+        text-align: center;
+    }
+    .hero_subtitle::after{
+        display: none;
+    }
+    .hero_subtitle {
+        position: unset;
+    }
+}

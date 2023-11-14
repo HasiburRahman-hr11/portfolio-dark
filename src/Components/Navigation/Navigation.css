@@ -1,0 +1,157 @@
+.navbar {
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+   background-color: transparent;
+}
+
+.navbar_brand {
+    display: flex;
+    max-width: 60px;
+    padding: 10px 0;
+    align-items: center;
+}
+
+.navbar_brand img {
+    object-fit: cover;
+}
+
+.navbar_toggle {
+    width: 42px;
+    height: 42px;
+    margin-left: auto;
+    background-color: #191919;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.menu_open {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar_toggle .menu_open span {
+    background-color: #fff;
+    width: 27px;
+    height: 2px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.navbar_toggle .menu_open span:nth-child(2) {
+    top: 20px;
+}
+
+.navbar_toggle .menu_open span:nth-child(3) {
+    width: 18px;
+    top: 32px;
+}
+
+.navbar_collapse {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 90%;
+    max-width: 500px;
+    background-color: #191919;
+    height: 100vh;
+    transition: all 0.5s ease;
+    padding: 60px 50px;
+    z-index: 20;
+}
+
+.navbar_collapse.navbar_active {
+    right: 0;
+    transition: all 0.5s ease;
+}
+
+.nav_menu {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.nav_menu::-webkit-scrollbar {
+    width: 2px;
+}
+
+.nav_menu::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+.nav_menu::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 5px;
+    border: 3px solid #999;
+}
+.nav_menu li{
+    margin-bottom: 20px;
+}
+.nav_menu li:last-child{
+    margin-bottom: 0;
+}
+.nav_menu li a {
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.nav_menu li a img {
+    object-fit: cover;
+    max-height: 200px;
+}
+
+.nav_menu li a .nav_link_content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    width: 100%;
+    height: calc(100% - 5px);
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.nav_menu li a:hover .nav_link_content {
+    opacity: 1;
+}
+.nav_overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    display: none;
+}
+.nav_overlay.active{
+    display: block;
+}
+
+@media only screen and (max-width:1250px) {
+    .nav_menu li a .nav_link_content {
+        opacity: 1;
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width:600px) {
+    .navbar_collapse {
+        padding: 30px 15px;
+    }
+}
